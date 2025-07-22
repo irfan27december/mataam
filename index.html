@@ -2,393 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mataam Al Mandi - Authentic Arabian Cuisine</title>
-  <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    rel="stylesheet"
-  />
-  <style>
-    /* Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body, html {
-      height: 100%;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #ffefba, #ffffff);
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    /* Container for full height */
-    #container {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-      background: white;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      border-radius: 8px;
-    }
-
-    header {
-      background: #d35400;
-      color: white;
-      padding: 20px 40px;
-      border-radius: 8px 8px 0 0;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.15);
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      letter-spacing: 2px;
-      font-weight: 900;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-    }
-
-    nav {
-      margin-top: 15px;
-      display: flex;
-      gap: 25px;
-      font-weight: 600;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.1rem;
-      transition: color 0.3s ease;
-      position: relative;
-    }
-    nav a:hover,
-    nav a.active {
-      color: #f39c12;
-    }
-    nav a.active::after {
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background: #f39c12;
-      border-radius: 2px;
-    }
-
-    /* Breadcrumbs */
-    .breadcrumbs {
-      margin: 15px 0 25px;
-      font-size: 0.9rem;
-      color: #666;
-    }
-    .breadcrumbs a {
-      color: #d35400;
-      text-decoration: none;
-    }
-    .breadcrumbs a:hover {
-      text-decoration: underline;
-    }
-    .breadcrumbs span {
-      margin: 0 5px;
-      color: #999;
-    }
-
-    /* Section styles */
-    section {
-      flex-grow: 1;
-      margin-bottom: 40px;
-    }
-
-    h2 {
-      color: #d35400;
-      margin-bottom: 15px;
-      border-bottom: 2px solid #f39c12;
-      padding-bottom: 5px;
-      font-size: 2rem;
-      font-weight: 700;
-      text-shadow: 1px 1px 2px #f39c12;
-    }
-
-    /* About Us */
-    #about p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      max-width: 900px;
-      margin-bottom: 15px;
-    }
-
-    /* Menu */
-    #menu ul {
-      list-style: none;
-      max-width: 600px;
-      columns: 2;
-      column-gap: 40px;
-    }
-    #menu li {
-      padding: 6px 0;
-      font-weight: 600;
-      font-size: 1.1rem;
-      position: relative;
-    }
-    #menu li::before {
-      content: "🍽️";
-      position: absolute;
-      left: -25px;
-      top: 3px;
-      font-size: 1.2rem;
-    }
-
-    /* Branches */
-    #branches ul {
-      list-style: none;
-      max-width: 800px;
-    }
-    #branches li {
-      margin-bottom: 20px;
-      font-size: 1.1rem;
-    }
-    #branches i.fa-map-marker-alt {
-      color: #d35400;
-      margin-right: 8px;
-    }
-    #branches a {
-      color: #2980b9;
-      text-decoration: none;
-    }
-    #branches a:hover {
-      text-decoration: underline;
-    }
-
-    /* Contact */
-    #contact {
-      max-width: 600px;
-    }
-    #contact address {
-      font-style: normal;
-      margin-bottom: 20px;
-      line-height: 1.5;
-      font-size: 1.1rem;
-    }
-    #contact i {
-      color: #d35400;
-      margin-right: 10px;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    form label {
-      font-weight: 600;
-      font-size: 1.1rem;
-    }
-    form input[type="text"],
-    form input[type="email"],
-    form textarea {
-      padding: 10px;
-      border: 1.8px solid #d35400;
-      border-radius: 5px;
-      font-size: 1rem;
-      font-family: inherit;
-      resize: vertical;
-    }
-    form textarea {
-      min-height: 100px;
-    }
-    form button {
-      background: #d35400;
-      color: white;
-      font-weight: 700;
-      padding: 12px;
-      font-size: 1.2rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    form button:hover {
-      background: #f39c12;
-    }
-
-    /* Footer */
-    footer {
-      background: #d35400;
-      color: white;
-      text-align: center;
-      padding: 15px 20px;
-      border-radius: 0 0 8px 8px;
-      font-size: 1rem;
-      box-shadow: 0 -3px 6px rgba(0,0,0,0.15);
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      #menu ul {
-        columns: 1;
-      }
-      nav {
-        flex-direction: column;
-        gap: 10px;
-      }
-      #container {
-        padding: 15px;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mataam Al Mandi - Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="common.js" defer></script>
 </head>
 <body>
-  <div id="container">
-    <header>
-      <h1>Mataam Al Mandi</h1>
-      <!--<nav>
-        <a href="#about" class="active" id="link-about">About Us</a>
-        <a href="#menu" id="link-menu">Menu</a>
-        <a href="#branches" id="link-branches">Branches</a>
-        <a href="#contact" id="link-contact">Contact</a>
-        <a href="#feedback" id="link-feedback">Feedback</a>
-      </nav>-->
-    </header>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Mataam Al Mandi</h1>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="branches.html">Branches</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <nav class="breadcrumbs" aria-label="breadcrumb">
-      <a href="#about" id="crumb-about">About Us</a>
-      <span>›</span>
-      <a href="#menu" id="crumb-menu">Menu</a>
-      <span>›</span>
-      <a href="#branches" id="crumb-branches">Branches</a>
-      <span>›</span>
-      <a href="#contact" id="crumb-contact">Contact</a>
-      <span>›</span>
-      <a href="#feedback" id="crumb-feedback">Feedback</a>
-    </nav>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Welcome to Mataam Al Mandi</h2>
+      <p>Authentic Arabian Cuisine in the Heart of Australia</p>
+      <a href="menu.html" class="btn-primary">Explore Our Menu</a>
+    </div>
+  </section>
 
-    <section id="about">
-      <h2><i class="fa fa-info-circle"></i> About Us</h2>
-      <p>
-        Welcome to <strong>Mataam Al Mandi</strong>, Sydney's premier destination for Authentic Arabian Cuisine. We pride ourselves in serving traditional dishes crafted with rich spices and slow-cooked perfection.
-      </p>
-      <p>
-        Our speciality lies in Mandi and Madfoon dishes, prepared with utmost love and authenticity. Experience the true flavors of Arabian hospitality with us.
-      </p>
-    </section>
+  <!-- About Preview Section -->
+  <section class="about-preview">
+    <div class="container">
+      <h3>Our Story</h3>
+      <p>Mataam Al Mandi brings you the rich, aromatic flavors of traditional Arabian cuisine, crafted with passion and served with warmth. Visit us at one of our multiple locations across Sydney.</p>
+      <a href="about.html" class="btn-secondary">Learn More</a>
+    </div>
+  </section>
 
-    <section id="menu">
-      <h2><i class="fa fa-utensils"></i> Menu</h2>
-      <ul>
-        <li>Mutton Mandi Single</li>
-        <li>Mutton Mandi Meal</li>
-        <li>Mutton Madfoon Single</li>
-        <li>Mutton Madfoon Meal</li>
-        <li>Chicken Mandi Single</li>
-        <li>Chicken Mandi Meal</li>
-        <li>Chicken Madfoon Single</li>
-        <li>Chicken Madfoon Meal</li>
-        <li>Mixed Mandi Meal</li>
-        <li>Shoulder Mandi Meal</li>
-        <li>Leg Mandi Meal</li>
-        <li>Small Family Pack</li>
-        <li>Medium Family Pack</li>
-        <li>Jumbo Family</li>
-        <li>Mutton Set</li>
-        <li>Mutton Small Piece</li>
-        <li>Rice - 1 Serve</li>
-        <li>Rice - 2 Serve</li>
-        <li>Rice - 3 Serve</li>
-        <li>Quarter Chicken</li>
-        <li>Half Chicken</li>
-        <li>Whole Chicken</li>
-        <li>Drink Can</li>
-        <li>Water Bottle</li>
-      </ul>
-    </section>
-
-    <section id="branches">
-      <h2><i class="fa fa-store"></i> Branches</h2>
-      <ul>
-        <li><i class="fa fa-map-marker-alt"></i><strong>Lakemba:</strong> 123 Haldon St, Lakemba NSW 2195 <a href="https://goo.gl/maps/6KhXw3d2q6j3VdJ96" target="_blank" rel="noopener noreferrer">View Map</a></li>
-        <li><i class="fa fa-map-marker-alt"></i><strong>Punchbowl:</strong> 78 The Boulevarde, Punchbowl NSW 2196 <a href="https://goo.gl/maps/q7fqPo8fJCPJX4Nf8" target="_blank" rel="noopener noreferrer">View Map</a></li>
-        <li><i class="fa fa-map-marker-alt"></i><strong>Surry Hills:</strong> 15 Crown St, Surry Hills NSW 2010 <a href="https://goo.gl/maps/8y4qR2oWdDqN3vxt6" target="_blank" rel="noopener noreferrer">View Map</a></li>
-        <li><i class="fa fa-map-marker-alt"></i><strong>Merrylands:</strong> 210 Merrylands Rd, Merrylands NSW 2160 <a href="https://goo.gl/maps/yW3XUVNxBHZQ5A5e7" target="_blank" rel="noopener noreferrer">View Map</a></li>
-        <li><i class="fa fa-map-marker-alt"></i><strong>Bella Vista:</strong> 5 Norwest Blvd, Bella Vista NSW 2153 <a href="https://goo.gl/maps/YZfDrPS3kYc2" target="_blank" rel="noopener noreferrer">View Map</a></li>
-        <li><i class="fa fa-map-marker-alt"></i><strong>Wentworthville:</strong> 10 Station St, Wentworthville NSW 2145 <a href="https://goo.gl/maps/aP4LKahKDq2MXHSP7" target="_blank" rel="noopener noreferrer">View Map</a></li>
-        <li><i class="fa fa-map-marker-alt"></i><strong>Campbelltown:</strong> 18 Queen St, Campbelltown NSW 2560 <a href="https://goo.gl/maps/xmGxMKiL32z" target="_blank" rel="noopener noreferrer">View Map</a></li>
-        <li><i class="fa fa-map-marker-alt"></i><strong>Liverpool:</strong> 67 Macquarie St, Liverpool NSW 2170 <a href="https://goo.gl/maps/tHtH57Dv4Qw" target="_blank" rel="noopener noreferrer">View Map</a></li>
-      </ul>
-    </section>
-
-    <section id="contact">
-      <h2><i class="fa fa-phone"></i> Contact Us</h2>
-      <address>
-        <p><i class="fa fa-map-marker-alt"></i> Main Office: 123 Haldon St, Lakemba NSW 2195</p>
-        <p><i class="fa fa-phone"></i> Phone: <a href="tel:+61297000000">+61 2 9700 0000</a></p>
-        <p><i class="fa fa-envelope"></i> Email: <a href="mailto:info@mataamalmadi.com.au">info@mataamalmadi.com.au</a></p>
-        <p><i class="fa fa-globe"></i> Website: <a href="https://www.mataamalmadi.com.au" target="_blank" rel="noopener noreferrer">www.mataamalmadi.com.au</a></p>
-      </address>
-    </section>
-
-    <section id="feedback">
-      <h2><i class="fa fa-comments"></i> Feedback</h2>
-      <form action="https://formspree.io/f/manovevj" method="POST">
-        <label for="name">Name <span aria-hidden="true" style="color: red;">*</span></label>
-        <input type="text" id="name" name="name" required placeholder="Your full name" />
-
-        <label for="email">Email <span aria-hidden="true" style="color: red;">*</span></label>
-        <input type="email" id="email" name="_replyto" required placeholder="your.email@example.com" />
-
-        <label for="message">Message <span aria-hidden="true" style="color: red;">*</span></label>
-        <textarea id="message" name="message" required placeholder="Write your feedback here..."></textarea>
-
-        <button type="submit"><i class="fa fa-paper-plane"></i> Send Feedback</button>
-      </form>
-    </section>
-  </div>
-
-  <footer>
-    &copy; 2025 Mataam Al Mandi - Authentic Arabian Cuisine | Sydney, Australia
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Mataam Al Mandi. All rights reserved.</p>
+      <p>Email: info@mataam-al-mandi.com.au | Phone: +61-1234-5678</p>
+    </div>
   </footer>
-
-  <script>
-    // Navigation and breadcrumb highlighting for single page
-    const navLinks = document.querySelectorAll("nav a");
-    const breadcrumbLinks = document.querySelectorAll(".breadcrumbs a");
-
-    function setActive(id) {
-      navLinks.forEach(a => a.classList.toggle("active", a.id === "link-" + id));
-      breadcrumbLinks.forEach(a => a.classList.toggle("active", a.id === "crumb-" + id));
-    }
-
-    // Scroll spy and click handlers
-    const sections = ["about", "menu", "branches", "contact", "feedback"];
-    sections.forEach(id => {
-      document.getElementById("link-" + id).addEventListener("click", e => {
-        e.preventDefault();
-        document.getElementById(id).scrollIntoView({behavior: "smooth"});
-        setActive(id);
-      });
-      document.getElementById("crumb-" + id).addEventListener("click", e => {
-        e.preventDefault();
-        document.getElementById(id).scrollIntoView({behavior: "smooth"});
-        setActive(id);
-      });
-    });
-
-    window.addEventListener("scroll", () => {
-      let scrollPos = window.scrollY + 100;
-      for(let id of sections){
-        let section = document.getElementById(id);
-        if(section.offsetTop <= scrollPos && section.offsetTop + section.offsetHeight > scrollPos){
-          setActive(id);
-          break;
-        }
-      }
-    });
-  </script>
 </body>
 </html>
