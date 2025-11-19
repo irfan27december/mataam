@@ -570,3 +570,81 @@ body {
     text-align: center;
   }
 }
+
+
+
+/* Menu Section */
+.menu-section {
+  padding: 4rem 1rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.menu-section h2 {
+  color: #b35c00;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.menu-section p {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.menu-category {
+  color: #b35c00;
+  font-size: 1.6rem;
+  margin: 2.5rem 0 1rem;
+  border-bottom: 3px solid #d19d42;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.menu-card {
+  background: #fff;
+  border: 3px solid #d19d42;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.12);
+  border-color: #b35c00;
+}
+
+.menu-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.menu-card h4 {
+  color: #b35c00;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.menu-card p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .menu-card img {
+    height: 160px;
+  }
+}
+

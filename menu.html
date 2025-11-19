@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mataam Al Mandi - Menu</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="common.js" defer></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">Mataam Al Mandi</div>
+      <nav class="navbar">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html" class="active">Menu</a></li>
+          <li><a href="branches.html">Branches</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><button class="btn-appointment" onclick="openModal()">Book Appointment</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Menu Section -->
+  <section class="menu-section">
+    <div class="container">
+      <h2>Our Menu</h2>
+      <p>Discover the authentic Arabian flavours of Mataam Al Mandi, crafted with passion and served with love.</p>
+
+      <!-- Mandi Section -->
+      <h3 class="menu-category">🥘 Mandi Specials</h3>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <img src="images/mutton-mandi.jpg" alt="Mutton Mandi">
+          <h4>🍗 Mutton Mandi</h4>
+          <p>Fragrant basmati rice with tender slow-cooked mutton. Available in single and meal options.</p>
+        </div>
+        <div class="menu-card">
+          <img src="images/chicken-mandi.jpg" alt="Chicken Mandi">
+          <h4>🍗 Chicken Mandi</h4>
+          <p>Juicy chicken served over aromatic mandi rice. Perfectly spiced and grilled.</p>
+        </div>
+        <div class="menu-card">
+          <img src="images/shoulder-mandi.jpg" alt="Shoulder Mandi">
+          <h4>🍖 Shoulder Mandi</h4>
+          <p>Premium mutton shoulder slow-cooked with rich spices and served family-style.</p>
+        </div>
+        <div class="menu-card">
+          <img src="images/leg-mandi.jpg" alt="Leg Mandi">
+          <h4>🍖 Leg Mandi</h4>
+          <p>A generous serving of mutton leg mandi — a signature feast for meat lovers.</p>
+        </div>
+      </div>
+
+      <!-- Madfoon Section -->
+      <h3 class="menu-category">🍖 Madfoon Selection</h3>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <img src="images/mutton-madfoon.jpg" alt="Mutton Madfoon">
+          <h4>🐑 Mutton Madfoon</h4>
+          <p>Traditional Yemeni-style slow-roasted mutton served with seasoned rice.</p>
+        </div>
+        <div class="menu-card">
+          <img src="images/chicken-madfoon.jpg" alt="Chicken Madfoon">
+          <h4>🍗 Chicken Madfoon</h4>
+          <p>Juicy chicken pieces marinated in aromatic spices, baked to perfection.</p>
+        </div>
+        <div class="menu-card">
+          <img src="images/mixed-mandi.jpg" alt="Mixed Mandi">
+          <h4>🥘 Mixed Mandi</h4>
+          <p>A hearty combination of mutton and chicken mandi served together.</p>
+        </div>
+      </div>
+
+      <!-- Desserts Section -->
+      <h3 class="menu-category">🍮 Desserts</h3>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <img src="images/kunafa.jpg" alt="Kunafa">
+          <h4>🍮 Kunafa</h4>
+          <p>Delicious layered pastry with sweet cheese filling and sugar syrup.</p>
+        </div>
+        <div class="menu-card">
+          <img src="images/basbousa.jpg" alt="Basbousa">
+          <h4>🍰 Basbousa</h4>
+          <p>Classic Middle Eastern semolina cake infused with rose syrup.</p>
+        </div>
+      </div>
+
+      <!-- Drinks Section -->
+      <h3 class="menu-category">🥤 Drinks</h3>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <img src="images/mango-juice.jpg" alt="Mango Juice">
+          <h4>🥭 Mango Juice</h4>
+          <p>Freshly blended mango juice for a tropical finish to your meal.</p>
+        </div>
+        <div class="menu-card">
+          <img src="images/mint-lemon.jpg" alt="Mint Lemonade">
+          <h4>🍋 Mint Lemonade</h4>
+          <p>Refreshing lemonade infused with mint leaves and a hint of zest.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Appointment Modal -->
+  <div id="appointmentModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Book an Appointment</h2>
+      <form id="appointmentForm">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="people">Number of People</label>
+        <input type="number" id="people" name="people" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message"></textarea>
+
+        <button type="submit" class="btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- EmailJS -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="script.js" defer></script>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Mataam Al Mandi | All Rights Reserved</p>
+      <div class="footer-links">
+        <a href="https://facebook.com" target="_blank">Facebook</a> |
+        <a href="https://instagram.com" target="_blank">Instagram</a> |
+        <a href="https://tiktok.com" target="_blank">TikTok</a> |
+        <a href="privacy-policy.html" target="_blank">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mataam Al Mandi - Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="common.js" defer></script>
+</head>
+<body>
+ 
+<!--
+	<!-- Header -->
+	<header class="site-header">
+	  <div class="container">
+		<div class="logo">Mataam Al Mandi</div>
+		<nav class="navbar">
+		  <input type="checkbox" id="menu-toggle">
+		  <label for="menu-toggle" class="menu-icon">&#9776;</label>
+		  <ul class="nav-links">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="menu.html">Menu</a></li>
+			<li><a href="branches.html">Branches</a></li>
+			<li><a href="gallery.html">Gallery</a></li>
+			<li><a href="contact.html">Contact Us</a></li>
+			<li><a href="about.html">About Us</a></li>
+			<li><button class="btn-appointment" onclick="openModal()">Book Appointment</button></li>
+		  </ul>
+		</nav>
+	  </div>
+	</header>
+
+
+  <!-- Hero Section -->
+  <!--
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Welcome to Mataam Al Mandi</h2>
+      <div class="scrolling-text">
+        <span>Authentic Arabian Cuisine in the Heart of Australia.</span>
+      </div>
+      <a href="menu.html" class="btn-primary">Explore Our Menu</a>
+    </div>
+  </section>
+	-->
+  <!-- About Preview Section -->
+  <!--
+  <section class="about-preview">
+    <div class="container">
+      <h3>Our Story</h3>
+      <p>Mataam Al Mandi brings you the rich, aromatic flavors of traditional Arabian cuisine, crafted with passion and served with warmth. Visit us at one of our multiple locations across Sydney.</p>
+      <a href="about.html" class="btn-secondary">Learn More</a>
+    </div>
+  </section>
+	-->
+   
+   
+     <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <h1>Welcome to Mataam Al Mandi</h1>
+	  <p>Mataam Al Mandi brings you the rich, aromatic flavors of traditional Arabian cuisine, crafted with passion and served with warmth. Visit us at one of our multiple locations across Sydney.</p>
+	  <div class="scrolling-text">
+        <span>Authentic Arabian Cuisine in the Heart of Australia.</span>
+      </div>
+      <!-- <p class="tagline">Authentic Arabian Cuisine in the Heart of Australia</p> -->
+      <div class="hero-buttons">
+        <a href="menu.html" class="btn-primary">Explore Menu</a>
+        <a href="about.html" class="btn-secondary">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro Section -->
+  <section class="intro-section">
+    <div class="container intro-content">
+      <div class="intro-text">
+        <h2>Experience Arabian Hospitality</h2>
+        <p>
+          Step into Mataam Al Mandi, where authentic Arabian cuisine meets modern elegance. 
+          From traditional Mandi rice to sizzling grills and desserts, every dish reflects 
+          our passion for rich flavors and warm hospitality across Australia.
+        </p>
+        <a href="branches.html" class="btn-primary">Find a Branch</a>
+      </div>
+      <div class="intro-image">
+        <img src="images/hero-dish.jpg" alt="Arabian Cuisine">
+      </div>
+    </div>
+  </section>
+
+	<!-- Appointment Modal -->
+	<div id="appointmentModal" class="modal">
+	  <div class="modal-content">
+		<span class="close" onclick="closeModal()">&times;</span>
+		<h2>Book an Appointment</h2>
+		<form id="appointmentForm">
+		  <label for="fullName">Full Name</label>
+		  <input type="text" id="fullName" name="fullName" required>
+
+		  <label for="phone">Phone Number</label>
+		  <input type="tel" id="phone" name="phone" required>
+
+		  <label for="email">Email</label>
+		  <input type="email" id="email" name="email" required>
+
+		  <label for="people">Number of People</label>
+		  <input type="number" id="people" name="people" required>
+
+		  <label for="message">Message</label>
+		  <textarea id="message" name="message"></textarea>
+
+		  <button type="submit" class="btn-primary">Submit</button>
+		</form>
+	  </div>
+	</div>
+
+	<!-- EmailJS -->
+	<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+	<script src="script.js" defer></script>
+
+
+
+
+	<!-- Footer -->
+	<footer class="site-footer">
+	  <div class="container">
+		<p>&copy; 2025 Mataam Al Mandi | All Rights Reserved</p>
+		<div class="footer-links">
+		  <a href="https://facebook.com" target="_blank">Facebook</a> |
+		  <a href="https://instagram.com" target="_blank">Instagram</a> |
+		  <a href="https://tiktok.com" target="_blank">TikTok</a> |
+		  <a href="privacy-policy.html">Privacy Policy</a>
+		</div>
+	  </div>
+	</footer>
+
+  
+</body>
+</html>
