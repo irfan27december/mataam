@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Reserve a Table - Mataam Al Mandi</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="common.js" defer></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">Mataam Al Mandi</div>
+      <nav class="navbar">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="branches.html">Branches</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html" class="active">Contact Us</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><button class="btn-appointment" onclick="openModal()">Book Appointment</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container reserve-container">
+    <h1>Reserve a Table</h1>
+    <p>Please fill in the details below to reserve a table. You'll see a confirmation page after you submit.</p>
+
+    <form id="reserveForm" class="reserve-form" onsubmit="handleReserveSubmit(event)">
+      <label for="rName">Full name</label>
+      <input id="rName" name="name" type="text" required>
+
+      <label for="rEmail">Email</label>
+      <input id="rEmail" name="email" type="email" required>
+
+      <label for="rPhone">Phone</label>
+      <input id="rPhone" name="phone" type="tel" required>
+
+      <label for="rBranch">Preferred Branch</label>
+      <select id="rBranch" name="branch" required>
+        <option value="Lakemba">Mataam Al Mandi - Lakemba</option>
+        <option value="Punchbowl">Mataam Al Mandi - Punchbowl</option>
+        <option value="Merrylands">Mataam Al Mandi - Merrylands</option>
+        <option value="Liverpool">Mataam Al Mandi - Liverpool</option>
+        <option value="Surry Hills">Mataam Al Mandi - Surry Hills</option>
+        <option value="Wentworthville">Mataam Al Mandi - Wentworthville</option>
+        <option value="Campbelltown">Mataam Al Mandi - Campbelltown</option>
+        <option value="Bellavista">Mataam Al Mandi - Bellavista</option>
+      </select>
+
+      <label for="rDate">Date</label>
+      <input id="rDate" name="date" type="date" required>
+
+      <label for="rTime">Time</label>
+      <input id="rTime" name="time" type="time" required>
+
+      <label for="rPeople">Number of people</label>
+      <input id="rPeople" name="people" type="number" min="1" value="2" required>
+
+      <label for="rMessage">Message / requests</label>
+      <textarea id="rMessage" name="message" rows="4"></textarea>
+
+      <button type="submit" class="btn-primary">Reserve Table</button>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Mataam Al Mandi | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script>
+    // client-side validation and redirect to thank-you page with query params
+    function handleReserveSubmit(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('rName').value.trim();
+      const email = document.getElementById('rEmail').value.trim();
+      const phone = document.getElementById('rPhone').value.trim();
+      const branch = document.getElementById('rBranch').value;
+      const date = document.getElementById('rDate').value;
+      const time = document.getElementById('rTime').value;
+      const people = document.getElementById('rPeople').value;
+      const message = document.getElementById('rMessage').value.trim();
+
+      if (!name || !email || !phone || !date || !time) {
+        alert('Please complete required fields.');
+        return;
+      }
+
+      // Build query string (encode)
+      const params = new URLSearchParams({
+        name, email, phone, branch, date, time, people, message
+      });
+
+      // Redirect to thank-you page — details shown there
+      window.location.href = 'thank-you.html?' + params.toString();
+    }
+  </script>
+  
+  
+  
+  
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+emailjs.init("lK8_-Y2lI_z9dd8qU");
+
+function handleReserveSubmit(e) {
+    e.preventDefault();
+
+    const params = {
+        full_name: document.getElementById("rName").value,
+        email: document.getElementById("rEmail").value,
+        phone: document.getElementById("rPhone").value,
+        branch: document.getElementById("rBranch").value,
+        date: document.getElementById("rDate").value,
+        time: document.getElementById("rTime").value,
+        people: document.getElementById("rPeople").value,
+        message: document.getElementById("rMessage").value
+    };
+
+    emailjs.send("service_d4quute", "template_namfzzb", params)
+    .then(function() {
+        window.location.href = "thank-you.html";
+    })
+    .catch(function(err) {
+        console.error(err);
+        alert("Unable to send reservation email. Please verify EmailJS settings.");
+    });
+}
+</script>
+
+  
+
+</body>
+</html>

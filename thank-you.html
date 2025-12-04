@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Thank You - Mataam Al Mandi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">Mataam Al Mandi</div>
+      <nav class="navbar">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="branches.html">Branches</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html" class="active">Contact Us</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container thankyou-container">
+    <div class="thankyou-card">
+      <h1>Thank you — your reservation is received!</h1>
+      <p>We have received your reservation request. A member of our team will contact you shortly to confirm the details.</p>
+
+      <h3>Your Reservation</h3>
+      <div id="reservationDetails" class="reservation-details">
+        <!-- JS will populate details here -->
+      </div>
+
+      <p><a href="index.html" class="btn-primary">Return to Home</a> <a href="branches.html" class="btn-secondary">View Branches</a></p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Mataam Al Mandi | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script>
+    // Read query params and show reservation details
+    (function () {
+      const qs = new URLSearchParams(window.location.search);
+      if (!qs || !qs.toString()) return;
+
+      const name = qs.get('name') || '';
+      const email = qs.get('email') || '';
+      const phone = qs.get('phone') || '';
+      const branch = qs.get('branch') || '';
+      const date = qs.get('date') || '';
+      const time = qs.get('time') || '';
+      const people = qs.get('people') || '';
+      const message = qs.get('message') || '';
+
+      const details = document.getElementById('reservationDetails');
+      if (!details) return;
+
+      details.innerHTML = `
+        <p><strong>Name:</strong> ${escapeHtml(name)}</p>
+        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+        <p><strong>Phone:</strong> ${escapeHtml(phone)}</p>
+        <p><strong>Branch:</strong> ${escapeHtml(branch)}</p>
+        <p><strong>Date:</strong> ${escapeHtml(date)} &nbsp; <strong>Time:</strong> ${escapeHtml(time)}</p>
+        <p><strong>People:</strong> ${escapeHtml(people)}</p>
+        <p><strong>Notes:</strong> ${escapeHtml(message)}</p>
+      `;
+
+      // small HTML escape helper
+      function escapeHtml(s) {
+        return String(s)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#039;");
+      }
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mataam Al Mandi - Contact Us</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="common.js" defer></script>
+</head>
+<body>
+
+  <!-- Header (consistent with site) -->
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">Mataam Al Mandi</div>
+      <nav class="navbar">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="branches.html">Branches</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html" class="active">Contact Us</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><button class="btn-appointment" onclick="openModal()">Book Appointment</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero / header image -->
+  <section class="hero small-hero">
+    <!-- Using the uploaded local image path you provided (will be transformed to a URL by the tool). -->
+    <div class="hero-image" style="background-image: url('/mnt/data/A_collage_of_nine_high-resolution_digital_photogra.png');"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <h1>Contact Mataam Al Mandi</h1>
+      <p>Questions, feedback or reservations — we’re here to help.</p>
+    </div>
+  </section>
+
+  <!-- Contact content -->
+  <main class="container contact-container">
+    <div class="contact-grid">
+
+      <div class="contact-card">
+        <h2>Contact Information</h2>
+        <p><strong>Email:</strong> <a href="mailto:info@mataam-al-mandi.com.au">info@mataam-al-mandi.com.au</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+61123456789">+61 12 345 6789</a></p>
+        <p><strong>Address (Head Office):</strong><br />
+           40 Haldon St, Lakemba NSW 2195</p>
+
+        <h3>Opening Hours</h3>
+        <ul>
+          <li>Mon–Thu: 11:00 AM – 10:00 PM</li>
+          <li>Fri–Sun: 11:00 AM – 11:00 PM</li>
+        </ul>
+
+        <p>
+          <a class="btn-primary" href="reserve-table.html">Reserve Table</a>
+        </p>
+      </div>
+
+      <div class="contact-card">
+        <h2>Send Us a Message</h2>
+        <!-- Simple contact form that opens reservation form or collects a message (no email service required) -->
+        <form id="contactForm" onsubmit="handleContactSubmit(event)">
+          <label for="cName">Full name</label>
+          <input id="cName" name="name" type="text" required>
+
+          <label for="cEmail">Email</label>
+          <input id="cEmail" name="email" type="email" required>
+
+          <label for="cPhone">Phone</label>
+          <input id="cPhone" name="phone" type="tel">
+
+          <label for="cMessage">Message</label>
+          <textarea id="cMessage" name="message" rows="5" required></textarea>
+
+          <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Mataam Al Mandi | All Rights Reserved</p>
+      <div class="footer-links">
+        <a href="https://facebook.com" target="_blank">Facebook</a> |
+        <a href="https://instagram.com" target="_blank">Instagram</a> |
+        <a href="https://tiktok.com" target="_blank">TikTok</a> |
+        <a href="privacy-policy.html" target="_blank">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Basic contact form handler: show a simple confirmation and clear form.
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('cName').value.trim();
+      const email = document.getElementById('cEmail').value.trim();
+      const phone = document.getElementById('cPhone').value.trim();
+      const message = document.getElementById('cMessage').value.trim();
+
+      if (!name || !email || !message) {
+        alert('Please complete name, email and message fields.');
+        return;
+      }
+
+      // In production you'd send this to a backend or EmailJS. For now show confirmation and reset.
+      alert('Thank you, ' + name + '. We have received your message and will be in touch shortly.');
+      document.getElementById('contactForm').reset();
+    }
+  </script>
+
+</body>
+</html>
