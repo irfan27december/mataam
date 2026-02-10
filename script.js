@@ -91,3 +91,26 @@ if (reserveForm) {
     });
 }
 
+
+
+/******************************
+ *   GALLERY LIGHTBOX VIEW    *
+ ******************************/
+const galleryImages = document.querySelectorAll(".gallery-img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightboxImage");
+
+if (galleryImages) {
+    galleryImages.forEach(img => {
+        img.addEventListener("click", function () {
+            lightbox.style.display = "flex";
+            lightboxImage.src = this.src;
+        });
+    });
+}
+
+function closeLightbox() {
+    lightbox.style.display = "none";
+}
+
+

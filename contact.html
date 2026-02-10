@@ -6,25 +6,82 @@
   <title>Mataam Al Mandi - Contact Us</title>
   <link rel="stylesheet" href="style.css" />
   <script src="common.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-
-  <!-- Header (consistent with site) -->
+  <!-- Header -->
   <header class="site-header">
     <div class="container">
-      <div class="logo">Mataam Al Mandi</div>
+       <!--<div class="logo-area">Mataam Al Mandi</div> -->
+	  <div class="logo-area"></div>
+	  <a href="index.html">
+        <!-- Replace 'logo.png' with the path to your actual logo file -->
+        <!-- Add CSS to style this image as needed -->
+        <img src="images/logo.png" alt="Mataam Al Mandi Logo">
+		<span class="logo">Mataam Al Mandi</span>
+      </a>
       <nav class="navbar">
         <input type="checkbox" id="menu-toggle">
         <label for="menu-toggle" class="menu-icon">&#9776;</label>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
+        <!-- <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
           <li><a href="menu.html">Menu</a></li>
           <li><a href="branches.html">Branches</a></li>
           <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.html" class="active">Contact Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><button class="btn-appointment" onclick="openModal()">Book Appointment</button></li>
-        </ul>
+        </ul> -->
+		<ul class="nav-links">
+		  <li>
+			<a href="index.html" class="active">
+			  <i class="fa-solid fa-house"></i>
+			  <span>Home</span>
+			</a>
+		  </li>
+
+		  <li>
+			<a href="menu.html">
+			  <i class="fa-solid fa-utensils"></i>
+			  <span>Menu</span>
+			</a>
+		  </li>
+
+		  <li>
+			<a href="branches.html">
+			  <i class="fa-solid fa-location-dot"></i>
+			  <span>Branches</span>
+			</a>
+		  </li>
+
+		  <li>
+			<a href="gallery.html">
+			  <i class="fa-solid fa-image"></i>
+			  <span>Gallery</span>
+			</a>
+		  </li>
+
+		  <li>
+			<a href="contact.html">
+			  <i class="fa-solid fa-envelope"></i>
+			  <span>Contact Us</span>
+			</a>
+		  </li>
+
+		  <li>
+			<a href="about.html">
+			  <i class="fa-solid fa-circle-info"></i>
+			  <span>About Us</span>
+			</a>
+		  </li>
+
+		  <li>
+			<button class="btn-appointment" onclick="openModal()">
+			  <i class="fa-solid fa-calendar-check"></i>
+			  Book Appointment
+			</button>
+		  </li>
+		</ul>		
       </nav>
     </div>
   </header>

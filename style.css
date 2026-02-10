@@ -648,3 +648,384 @@ body {
   }
 }
 
+/* ---------------------------
+   GALLERY GRID
+---------------------------- */
+
+.gallery-section {
+  padding: 4rem 1rem;
+  background: #fff;
+  text-align: center;
+}
+
+.gallery-section h2 {
+  font-size: 2rem;
+  color: #b35c00;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 3px solid #d19d42;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.03);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  border: 4px solid #fff;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+/* Logo*/
+.logo img {
+    height: 50px; /* Adjust the height as needed */
+    width: auto;
+    vertical-align: middle;
+}
+
+
+.logo-area a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+/* =========================
+   HEADER LOGO STYLING
+========================= */
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo wrapper */
+.site-header a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Logo image */
+.site-header img {
+  height: 60px;              /* ✅ controls logo size */
+  width: auto;
+  max-width: 120px;
+  object-fit: contain;
+  margin-right: 12px;
+}
+
+/* Text logo (optional – keep or remove) */
+.site-header .logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .site-header img {
+    height: 48px;
+    max-width: 90px;
+  }
+
+  .site-header .logo {
+    font-size: 1.1rem;
+  }
+}
+
+
+
+.nav-links li a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.nav-links li a i {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+/* Appointment button icon */
+.btn-appointment i {
+  margin-right: 6px;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .nav-links li a {
+    font-size: 16px;
+  }
+
+  .nav-links li a i {
+    font-size: 16px;
+  }
+}
+
+
+
+.branch-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 30px;
+}
+
+.branch-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.branch-actions {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.btn-map,
+.btn-directions {
+  flex: 1;
+  text-align: center;
+  padding: 8px 10px;
+  background: #d4a44c;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.btn-directions {
+  background: #333;
+}
+
+.branch-card iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+
+.branches-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+
+
+.branches-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.branch-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform .3s ease;
+}
+
+.branch-card:hover {
+  transform: translateY(-5px);
+}
+
+.branch-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.branch-card h3 i,
+.branch-card p i {
+  color: #c89b3c;
+  margin-right: 6px;
+}
+
+.branch-actions {
+  display: flex;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.btn-map, .btn-call {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn-map {
+  background: #333;
+  color: #fff;
+}
+
+.btn-call {
+  background: #c89b3c;
+  color: #000;
+}
+
+
+.branch-card i {
+  color: #c89b3c;
+  margin-right: 6px;
+  font-size: 16px;
+}
+
+.branch-title i {
+  font-size: 18px;
+}
+
+/*
+.branch-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.branch-controls input {
+  padding: 10px;
+  flex: 1;
+  max-width: 300px;
+}
+
+.branch-controls button {
+  padding: 10px 16px;
+  cursor: pointer;
+} */
+
+.distance {
+  font-weight: bold;
+  color: #444;
+}
+
+.open {
+  color: green;
+  font-weight: bold;
+}
+
+.closed {
+  color: red;
+  font-weight: bold;
+}
+
+
+
+/* ===== FORCE PERFECT ALIGNMENT ===== */
+.branch-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* Normalize EVERYTHING */
+.branch-controls * {
+  box-sizing: border-box;
+}
+
+/* Input + Buttons */
+.branch-controls input,
+.branch-controls button {
+  height: 42px;
+  line-height: 42px;          /* 🔥 KEY FIX */
+  padding: 0 16px;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+/* Search box */
+.branch-controls input {
+  min-width: 240px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Outline button */
+.btn-outline {
+  background: #fff;
+  border: 2px solid #f39c12;
+  color: #f39c12;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+/* Filled button */
+.btn-primary {
+  background: #f39c12;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+/* Status text */
+.location-status {
+  height: 42px;
+  line-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+

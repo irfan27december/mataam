@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mataam Al Mandi - Branches</title>
+  <link rel="stylesheet" href="style.css" />  
+  <script src="common.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-KY4d5Y8l1A5q6z5F8zQJ6xJk7F6mY3C5yZB4w2U8W1B3H2y+V8y5x8B7d8M5U1A5FQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> -- >
+</head>
+<body>
+
+ <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+       <!--<div class="logo-area">Mataam Al Mandi</div> -->
+	  <div class="logo-area"></div>
+	  <a href="index.html">
+        <!-- Replace 'logo.png' with the path to your actual logo file -->
+        <!-- Add CSS to style this image as needed -->
+        <img src="images/logo.png" alt="Mataam Al Mandi Logo">
+		<span class="logo">Mataam Al Mandi</span>
+      </a>
+      <nav class="navbar">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <!-- <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="branches.html">Branches</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><button class="btn-appointment" onclick="openModal()">Book Appointment</button></li>
+        </ul> -->
+		<ul class="nav-links">
+		  <li>
+			<a href="index.html" class="active">
+			  <i class="fa-solid fa-house"></i>
+			  <span>Home</span>
+			</a>
+		  </li>
+
+		  <li>
+			<a href="menu.html">
+			  <i class="fa-solid fa-utensils"></i>
+			  <span>Menu</span>
+			</a>
+		  </li>
+
+		  <li>
+			<a href="branches.html">
+			  <i class="fa-solid fa-location-dot"></i>
+			  <span>Branches</span>
+			</a>
+		  </li>
+
+		  <li>
+			<a href="gallery.html">
+			  <i class="fa-solid fa-image"></i>
+			  <span>Gallery</span>
+			</a>
+		  </li>
+
+		  <li>
+			<a href="contact.html">
+			  <i class="fa-solid fa-envelope"></i>
+			  <span>Contact Us</span>
+			</a>
+		  </li>
+
+		  <li>
+			<a href="about.html">
+			  <i class="fa-solid fa-circle-info"></i>
+			  <span>About Us</span>
+			</a>
+		  </li>
+
+		  <li>
+			<button class="btn-appointment" onclick="openModal()">
+			  <i class="fa-solid fa-calendar-check"></i>
+			  Book Appointment
+			</button>
+		  </li>
+		</ul>		
+      </nav>
+    </div>
+  </header>
+
+  <!-- Branches Section -->
+  <section class="branches-section">
+    <div class="container">
+      <h2>Our Branches</h2>
+      <p>Visit one of our locations to enjoy authentic Arabian dining experiences across NSW.</p>
+
+      <div class="branches-grid">
+
+	  <!-- Lakemba -->
+	  <div class="branch-card">
+		<img src="images/lakemba.jpg" alt="Mataam Al Mandi Lakemba">
+		<h3>📍 Lakemba</h3>
+		<p>30B Haldon St, Lakemba NSW 2195</p>
+		<p><strong>Phone:</strong> +61 2 9150 6030</p>
+
+		<div class="branch-actions">
+		  <a href="https://www.google.com/maps/search/?api=1&query=Mataam+Al+Mandi+Lakemba" target="_blank" class="btn-map">📍 View on Map</a>
+		  <a href="https://www.google.com/maps/dir/?api=1&destination=Mataam+Al+Mandi+Lakemba" target="_blank" class="btn-directions">🚗 Get Directions</a>
+		</div>
+
+		<iframe loading="lazy" src="https://www.google.com/maps?q=Mataam+Al+Mandi+Lakemba&output=embed"></iframe>
+	  </div>
+
+	  <!-- Punchbowl -->
+	  <div class="branch-card">
+		<img src="images/punchbowl.jpg" alt="Mataam Al Mandi Punchbowl">
+		<h3>📍 Punchbowl</h3>
+		<p>112 The Boulevarde, Punchbowl NSW 2196</p>
+		<p><strong>Phone:</strong> +61 2 8764 3222</p>
+
+		<div class="branch-actions">
+		  <a href="https://www.google.com/maps/search/?api=1&query=Mataam+Al+Mandi+Punchbowl" target="_blank" class="btn-map">📍 View on Map</a>
+		  <a href="https://www.google.com/maps/dir/?api=1&destination=Mataam+Al+Mandi+Punchbowl" target="_blank" class="btn-directions">🚗 Get Directions</a>
+		</div>
+
+		<iframe loading="lazy" src="https://www.google.com/maps?q=Mataam+Al+Mandi+Punchbowl&output=embed"></iframe>
+	  </div>
+
+	  <!-- Merrylands -->
+	  <div class="branch-card">
+		<img src="images/merrylands.jpg" alt="Mataam Al Mandi Merrylands">
+		<h3>📍 Merrylands</h3>
+		<p>4/8 Stockland Mall, Merrylands NSW 2160</p>
+		<p><strong>Phone:</strong> +61 2 9637 9911</p>
+
+		<div class="branch-actions">
+		  <a href="https://www.google.com/maps/search/?api=1&query=Mataam+Al+Mandi+Merrylands" target="_blank" class="btn-map">📍 View on Map</a>
+		  <a href="https://www.google.com/maps/dir/?api=1&destination=Mataam+Al+Mandi+Merrylands" target="_blank" class="btn-directions">🚗 Get Directions</a>
+		</div>
+
+		<iframe loading="lazy" src="https://www.google.com/maps?q=Mataam+Al+Mandi+Merrylands&output=embed"></iframe>
+	  </div>
+
+	  <!-- Liverpool -->
+	  <div class="branch-card">
+		<img src="images/liverpool.jpg" alt="Mataam Al Mandi Liverpool">
+		<h3>📍 Liverpool</h3>
+		<p>Shop 3, 275 Macquarie St, Liverpool NSW 2170</p>
+		<p><strong>Phone:</strong> +61 2 9601 8877</p>
+
+		<div class="branch-actions">
+		  <a href="https://www.google.com/maps/search/?api=1&query=Mataam+Al+Mandi+Liverpool+NSW" target="_blank" class="btn-map">📍 View on Map</a>
+		  <a href="https://www.google.com/maps/dir/?api=1&destination=Mataam+Al+Mandi+Liverpool+NSW" target="_blank" class="btn-directions">🚗 Get Directions</a>
+		</div>
+
+		<iframe loading="lazy" src="https://www.google.com/maps?q=Mataam+Al+Mandi+Liverpool+NSW&output=embed"></iframe>
+	  </div>
+
+	  <!-- Surry Hills -->
+	  <div class="branch-card">
+		<img src="images/surry-hills.jpg" alt="Mataam Al Mandi Surry Hills">
+		<h3>📍 Surry Hills</h3>
+		<p>405 Crown St, Surry Hills NSW 2010</p>
+		<p><strong>Phone:</strong> +61 2 9331 5522</p>
+
+		<div class="branch-actions">
+		  <a href="https://www.google.com/maps/search/?api=1&query=Mataam+Al+Mandi+Surry+Hills" target="_blank" class="btn-map">📍 View on Map</a>
+		  <a href="https://www.google.com/maps/dir/?api=1&destination=Mataam+Al+Mandi+Surry+Hills" target="_blank" class="btn-directions">🚗 Get Directions</a>
+		</div>
+
+		<iframe loading="lazy" src="https://www.google.com/maps?q=Mataam+Al+Mandi+Surry+Hills&output=embed"></iframe>
+	  </div>
+
+	  <!-- Wentworthville -->
+	  <div class="branch-card">
+		<img src="images/wentworthville.jpg" alt="Mataam Al Mandi Wentworthville">
+		<h3>📍 Wentworthville</h3>
+		<p>326 Great Western Hwy, Wentworthville NSW 2145</p>
+		<p><strong>Phone:</strong> +61 2 9762 8899</p>
+
+		<div class="branch-actions">
+		  <a href="https://www.google.com/maps/search/?api=1&query=Mataam+Al+Mandi+Wentworthville" target="_blank" class="btn-map">📍 View on Map</a>
+		  <a href="https://www.google.com/maps/dir/?api=1&destination=Mataam+Al+Mandi+Wentworthville" target="_blank" class="btn-directions">🚗 Get Directions</a>
+		</div>
+
+		<iframe loading="lazy" src="https://www.google.com/maps?q=Mataam+Al+Mandi+Wentworthville&output=embed"></iframe>
+	  </div>
+
+	  <!-- Campbelltown -->
+	  <div class="branch-card">
+		<img src="images/campbelltown.jpg" alt="Mataam Al Mandi Campbelltown">
+		<h3>📍 Campbelltown</h3>
+		<p>2/171 Queen St, Campbelltown NSW 2560</p>
+		<p><strong>Phone:</strong> +61 2 4628 3344</p>
+
+		<div class="branch-actions">
+		  <a href="https://www.google.com/maps/search/?api=1&query=Mataam+Al+Mandi+Campbelltown" target="_blank" class="btn-map">📍 View on Map</a>
+		  <a href="https://www.google.com/maps/dir/?api=1&destination=Mataam+Al+Mandi+Campbelltown" target="_blank" class="btn-directions">🚗 Get Directions</a>
+		</div>
+
+		<iframe loading="lazy" src="https://www.google.com/maps?q=Mataam+Al+Mandi+Campbelltown&output=embed"></iframe>
+	  </div>
+
+	</div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Mataam Al Mandi | All Rights Reserved</p>
+      <div class="footer-links">
+        <a href="https://facebook.com" target="_blank">Facebook</a> |
+        <a href="https://instagram.com" target="_blank">Instagram</a> |
+        <a href="https://tiktok.com" target="_blank">TikTok</a> |
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

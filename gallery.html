@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mataam Al Mandi - Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="common.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+   <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+       <!--<div class="logo-area">Mataam Al Mandi</div> -->
+	  <div class="logo-area"></div>
+	  <a href="index.html">
+        <!-- Replace 'logo.png' with the path to your actual logo file -->
+        <!-- Add CSS to style this image as needed -->
+        <img src="images/logo.png" alt="Mataam Al Mandi Logo">
+		<span class="logo">Mataam Al Mandi</span>
+      </a>
+      <nav class="navbar">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <!-- <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="branches.html">Branches</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><button class="btn-appointment" onclick="openModal()">Book Appointment</button></li>
+        </ul> -->
+		<ul class="nav-links">
+		  <li>
+			<a href="index.html" class="active">
+			  <i class="fa-solid fa-house"></i>
+			  <span>Home</span>
+			</a>
+		  </li>
+
+		  <li>
+			<a href="menu.html">
+			  <i class="fa-solid fa-utensils"></i>
+			  <span>Menu</span>
+			</a>
+		  </li>
+
+		  <li>
+			<a href="branches.html">
+			  <i class="fa-solid fa-location-dot"></i>
+			  <span>Branches</span>
+			</a>
+		  </li>
+
+		  <li>
+			<a href="gallery.html">
+			  <i class="fa-solid fa-image"></i>
+			  <span>Gallery</span>
+			</a>
+		  </li>
+
+		  <li>
+			<a href="contact.html">
+			  <i class="fa-solid fa-envelope"></i>
+			  <span>Contact Us</span>
+			</a>
+		  </li>
+
+		  <li>
+			<a href="about.html">
+			  <i class="fa-solid fa-circle-info"></i>
+			  <span>About Us</span>
+			</a>
+		  </li>
+
+		  <li>
+			<button class="btn-appointment" onclick="openModal()">
+			  <i class="fa-solid fa-calendar-check"></i>
+			  Book Appointment
+			</button>
+		  </li>
+		</ul>		
+      </nav>
+    </div>
+  </header>
+
+  <!-- Gallery Section -->
+  <section class="gallery-section">
+    <div class="container">
+      <h2>Our Gallery</h2>
+      <p>Explore the ambience, flavours and experience of Mataam Al Mandi.</p>
+
+      <div class="gallery-grid">
+
+        <!-- Add your optimized images in images/gallery folder -->
+        <img src="images/gallery/image_1.jpg" loading="lazy" alt="Gallery Image 1" class="gallery-img">
+        <img src="images/gallery/image_2.jpg" loading="lazy" alt="Gallery Image 2" class="gallery-img">
+        <img src="images/gallery/image_3.jpg" loading="lazy" alt="Gallery Image 3" class="gallery-img">
+        <img src="images/gallery/image_4.jpg" loading="lazy" alt="Gallery Image 4" class="gallery-img">
+        <img src="images/gallery/image_5.jpg" loading="lazy" alt="Gallery Image 5" class="gallery-img">
+        <img src="images/gallery/image_6.jpg" loading="lazy" alt="Gallery Image 6" class="gallery-img">
+        <img src="images/gallery/image_7.jpg" loading="lazy" alt="Gallery Image 7" class="gallery-img">
+        <img src="images/gallery/image_8.jpg" loading="lazy" alt="Gallery Image 8" class="gallery-img">
+        <img src="images/gallery/image_9.jpg" loading="lazy" alt="Gallery Image 9" class="gallery-img">
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Preview -->
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img id="lightboxImage" class="lightbox-content">
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Mataam Al Mandi | All Rights Reserved</p>
+    </div>
+  </footer>
+
+</body>
+</html>
