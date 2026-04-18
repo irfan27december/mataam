@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - Mataam Al Mandi</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="common.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo-container">
+      <img src="images/logo.png" class="logo-img">
+      <span class="logo">Mataam Al Mandi</span>
+    </a>
+
+    <nav class="navbar">
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+      <ul class="nav-links">
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="menu.html">🍽️ Menu</a></li>
+        <li><a href="branches.html">📍 Branches</a></li>
+        <li><a href="gallery.html">🖼️ Gallery</a></li>
+        <li><a href="contact.html">✉️ Contact Us</a></li>
+        <li><a href="about.html" class="active">ℹ️ About Us</a></li>
+        <li><button class="btn-appointment" onclick="openModal()">Book Appointment</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="about-hero">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>Our Story</h1>
+    <p>Authentic Arabian flavours, crafted with passion and tradition</p>
+  </div>
+</section>
+
+<!-- STORY SECTION -->
+<section class="about-section">
+  <div class="container about-grid">
+    
+    <div class="about-text">
+      <h2>Who We Are</h2>
+      <p>
+        Mataam Al Mandi is a celebration of authentic Arabian cuisine, bringing
+        the rich heritage of traditional Mandi cooking to Australia.
+      </p>
+      <p>
+        Our recipes are inspired by centuries-old Yemeni traditions, using
+        aromatic spices, slow-cooking techniques, and premium ingredients to
+        deliver unforgettable flavours.
+      </p>
+    </div>
+
+    <div class="about-image">
+      <img src="images/gallery1.png" alt="Restaurant Interior">
+    </div>
+
+  </div>
+</section>
+
+<!-- VISION & MISSION -->
+<section class="about-section dark">
+  <div class="container about-grid reverse">
+
+    <div class="about-image">
+      <img src="images/gallery1.png" alt="Food">
+    </div>
+
+    <div class="about-text">
+      <h2>Our Vision & Mission</h2>
+      <p>
+        <strong>Vision:</strong> To become Australia's most loved destination
+        for authentic Arabian dining experiences.
+      </p>
+      <p>
+        <strong>Mission:</strong> To serve high-quality, flavour-rich dishes
+        with exceptional hospitality, creating memorable moments for every guest.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- TEAM SECTION -->
+<section class="team-section">
+  <div class="container">
+    <h2>Meet Our Team</h2>
+    <p>Passionate chefs and hospitality experts behind every dish</p>
+
+    <div class="team-grid">
+
+      <div class="team-card">
+        <img src="images/chef.png" alt="Head Chef">
+        <h3>Chef Ahmed</h3>
+        <p>Head Chef – Specialist in Traditional Mandi</p>
+      </div>
+
+      <div class="team-card">
+        <img src="images/chef.png" alt="Chef">
+        <h3>Chef Kareem</h3>
+        <p>Grill & BBQ Expert</p>
+      </div>
+
+      <div class="team-card">
+        <img src="images/chef.png" alt="Manager">
+        <h3>Fatima Ali</h3>
+        <p>Restaurant Manager</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HIGHLIGHT STRIP -->
+<section class="highlight-strip">
+  <div class="container">
+    <div class="highlight-item">🔥 Authentic Arabian Flavours</div>
+    <div class="highlight-item">🍖 Premium Quality Ingredients</div>
+    <div class="highlight-item">⭐ Exceptional Hospitality</div>
+  </div>
+</section>
+
+<!-- Appointment Modal -->
+<div id="appointmentModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Book an Appointment</h2>
+    <form id="appointmentForm">
+      <input type="text" placeholder="Full Name" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <input type="email" placeholder="Email" required>
+      <input type="number" placeholder="Number of People" required>
+      <textarea placeholder="Message"></textarea>
+      <button type="submit" class="btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2025 Mataam Al Mandi | All Rights Reserved</p>
+  </div>
+</footer>
+
+</body>
+</html>
